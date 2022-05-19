@@ -1,0 +1,270 @@
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
+
+:root {
+    --font-family:"Nunito Sans", sans-serif;
+    --font-color:hsl(200, 15%, 8%);
+    --dark-bg-color: hsl(207, 26%, 17%);
+    --dark-elem-color:hsl(209, 23%, 22%);
+    --input-color: hsl(0, 0%, 52%);
+    --bg-color: hsl(0, 0%, 98%);
+    --elem-color: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-height: 100vh;
+    background-color: hsl(0,0%,98%);
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+}
+
+.container:nth-child(1) {
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.container input {
+    width: 100%;
+    padding: 17px 14px;
+    outline:0;
+    border:0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+button {
+    outline:none;
+    border: 0;
+    background:transparent;
+    cursor: pointer;
+}
+
+.dark {
+    font-size: 18px;
+    padding-right: 15px;
+}
+.dark i {
+    padding-right: 5px;
+}
+
+.form {
+    padding-left: 36px;
+    width: 400px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.form i {
+    padding-left: 2px;
+    position: absolute;
+    top:16px;
+    left:16px;
+    cursor: pointer;
+}
+
+.dropDownCon {
+    width: 200px;
+    position: relative;
+}
+
+.dropDown {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 17px 14px;
+    border-radius: 5px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+    cursor:pointer;
+}
+
+.drop {
+    width: 100%;
+    position: absolute;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+    top: 4rem;
+    padding:10px 14px;
+    border-radius: 5px;
+    background: var(--bg-color);
+}
+
+.dropDown p {
+    letter-spacing: 0.5px;
+}
+.drop p {
+    margin: 5px 0;
+}
+
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 30px;   
+}
+
+.list {
+    margin-left: 30px;
+    min-height: 400px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+    width:300px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
+.country-img img {
+    width:100%;
+}
+
+.country-info {
+    margin-top: -5px;
+    padding: 0 10px 0 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.country-info h4 {
+    padding: 10px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.country-info p {
+    letter-spacing: 1px;
+}
+.country-info p > strong {
+    font-weight: 600;
+}
+
+.show {
+    display: none;
+}
+
+.regions {
+    cursor: pointer;;
+}
+
+/*---------------------------------------_DARK_MODE_STYLING_---------------------*/
+.dark-mode {
+    background: var(--dark-elem-color);
+    color:var(--dark-elem-color);
+}
+.dark-mode > .dropDown{
+    background: var(--dark-elem-color);
+}
+
+.dark-mode input, .drop{
+    background-color: var(--dark-elem-color);
+    color:var(--elem-color);
+}
+.dark-mode > .container{
+    color:var(--elem-color);
+}
+.dark-mode button{
+    color:var(--elem-color);
+}
+.dark-mode > .countries{
+    background-color: var(--dark-bg-color);
+}
+
+.dark-mode > .second{
+    background-color: var(--dark-bg-color);
+}
+.dark-mode  .list{
+    background-color: var(--dark-elem-color);
+    color:var(--elem-color);
+}
+
+.dark-mode .back{
+    background: var(--dark-elem-color);
+    color:var(--elem-color);
+}
+.dark-mode .country-details{
+    background: var(--dark-elem-color);
+    color:var(--elem-color);
+}
+
+
+/* COUNTRIES SIGLE PAGE STYLING */
+.country-details {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    padding: 30px;
+}
+
+.back {
+    position: absolute;
+    top: 48px;
+    left: 30px;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius:5px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.main-info {  
+    width: 50%;
+    margin-left: 40px;
+    margin-bottom:3rem;
+}
+.main-info h1{  
+    font-size:2rem;
+    margin-bottom: 20px;
+}
+
+.flag-info {  
+    width: 40%;   
+    margin-left: 20px;
+}
+.flag-info img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
+
+.info-div { 
+    font-size:18px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+.info-div h1{ 
+    font-size: 40px;
+    margin: 10px 0px;
+    letter-spacing: 1px;
+}
+
+.inner p {
+    letter-spacing: 1px;
+    padding: 5px;
+}
+.inner p > strong {
+    font-weight: 600;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Countries API</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Where in the World?</h1>
+        <button class="dark"><i class="far fa-moon night"></i>Dark Mode</button>
+    </div>
+
+    <div class="container second">
+        <div class="form">
+            <input type="text" placeholder="Search for a country..." class="search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="dropDownCon">
+            <div class="dropDown">
+                <p>Filter by Region</p>
+                <button><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="drop show">
+                <p class="regions">Africa</p>
+                <p class="regions">America</p>
+                <p class="regions">Asia</p>
+                <p class="regions">Europe</p>
+                <p class="regions">Oceania</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="countries">
+<!--countries will be displayed here, from API-->
+    </div>
+
+<!---------------------DETAILED INFOS ABOUT COUNTRIES--------------------->
+        <div class="country-details show">
+            <button class="back">Back</button>
+            <div class="info">
+                <div class="flag-info">
+                    <img src="" alt="">
+                </div>
+                <div class="main-info">
+                    <h1></h1>
+                    <div class="info-div">
+                        <div class="inner info-left">
+                            <p><strong>Native Name:</strong> ${data.name}</p>
+                            <p><strong>Population:</strong> ${data.population}</p>
+                            <p><strong>Sub Region:</strong> ${data.subregion}</p>
+                            <p><strong>Capital:</strong> ${data.capital}</p>
+                        </div>
+                        <div class="inner info-right">
+                            <p><strong>Top Level Domain:</strong> ${data.name}</p>
+                            <p><strong>Currencies:</strong> ${data.population}</p>
+                            <p><strong>Languages:</strong> ${data.subregion}</p>                
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
